@@ -14,7 +14,13 @@ module.exports = (w, config) => {
             app: ['./src/index.js']
         },
         plugins: [
-            ...(!isDev ? [new CleanWebpackPlugin()] : []),
+            ...(!isDev
+                ? [
+                      new CleanWebpackPlugin({
+                          cleanOnceBeforeBuildPatterns: ['**/*', '!composer.json', '!index.php']
+                      })
+                  ]
+                : []),
             // ...(!isDev
             //     ? [
             //           new CopyWebpackPlugin({

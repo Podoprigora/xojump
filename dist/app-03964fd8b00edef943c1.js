@@ -1,1 +1,0 @@
-(self.webpackChunkxcjump=self.webpackChunkxcjump||[]).push([[143],{244:(e,t,n)=>{"use strict";var u=n(294),c=function(){return u.createElement("div",null,"Init App")};n(935).render(u.createElement(c,null),document.getElementById("root"))}},e=>{"use strict";e.O(0,[216],(()=>(244,e(e.s=244)))),e.O()}]);
