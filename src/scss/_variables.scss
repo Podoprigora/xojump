@@ -1,0 +1,94 @@
+@use 'sass:math';
+
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-primary-darken-1: #6d5d4b;
+$color-primary-darken-2: #54483a;
+
+$color-secondary: #000;
+$color-secondary-light-1: lighten($color-secondary, 10%);
+
+$color-gray-lighten: #f9f7f6;
+$color-gray-light-2: darken($color-gray-lighten, 4%);
+$color-gray-light: #aaa;
+
+$color-red: #f44336;
+
+$font-family-primary: "Nutito", Arial, sans-serif;
+$font-family-secondary: 'Josefin Sans', Arial, sans-serif;
+$font-size-small: 1.2rem;
+$font-size-medium: 1.4rem;
+$font-size-xmedium: 1.7rem;
+$font-size-large: 2rem;
+$font-size: $font-size-medium;
+$font-weight: 300;
+$line-height: 1.6;
+
+$body-color: $color-secondary;
+
+$border-radius-small: .2rem;
+$border-radius-medium: .5rem;
+$border-radius-large: 1rem;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: px-to-em(576px);
+$breakpoint-md: px-to-em(768px);
+$breakpoint-lg: px-to-em(992px);
+$breakpoint-xl: px-to-em(1200px);
+$breakpoint-xxl: px-to-em(1400px);
+
+$breakpoints: (
+	"xs": $breakpoint-xs,
+	"sm": $breakpoint-sm,
+	"md": $breakpoint-md,
+	"lg": $breakpoint-lg,
+	"xl": $breakpoint-xl,
+	"xxl": $breakpoint-xxl
+);
+
+// Grid & spacing
+
+$spacer: .8rem;
+
+$spacing-scale-0: 0;
+$spacing-scale-1: $spacer * 0.25; // .2rem
+$spacing-scale-2: $spacer * 0.5; // .4rem
+$spacing-scale-3: $spacer * 0.75; // .6rem
+$spacing-scale-4: $spacer; // .8rem
+$spacing-scale-5: $spacer * 1.25; // 1rem
+$spacing-scale-6: $spacer * 1.5; // 1.2rem
+$spacing-scale-7: $spacer * 1.75; // 1.4rem
+$spacing-scale-8: $spacer * 2; // 1.6rem
+$spacing-scale-9: $spacer * 2.25; // 1.8rem
+$spacing-scale-10: $spacer * 2.5; // 2rem
+$spacing-scale-11: $spacer * 2.75; // 2.2rem
+$spacing-scale-12: $spacer * 3; // 2.4rem
+$spacing-scale-13: $spacer * 3.25; // 2.6rem
+$spacing-scale-14: $spacer * 3.5; // 2.8rem
+$spacing-scale-15: $spacer * 3.75; // 3rem
+$spacing-scale-16: $spacer * 4; // 3.2rem
+$spacing-scale-17: $spacer * 4.25; // 3.4rem
+$spacing-scale-18: $spacer * 4.5; // 3.6rem
+$spacing-scale-19: $spacer * 4.75; // 3.8rem
+$spacing-scale-20: $spacer * 5; // 4rem
+$spacing-scale-24: $spacer * 6; // 4.8rem
+
+$grid-columns: 8;
+$grid-column-width: 16rem;
+$container-max-width: $grid-column-width * $grid-columns;
+$container-gap: math.div($grid-column-width, 4);
+$container-gap-small: math.div($grid-column-width, 8);
+
+// Heading
+$heading-1-font-size: 4.8rem;
+$heading-2-font-size: 3.2rem;
+$heading-3-font-size: 2.4rem;
+$heading-4-font-size: 2rem;
+$heading-5-font-size: 1.8rem;
+$heading-6-font-size: $font-size;
+$heading-font-family: $font-family-secondary;
+$heading-font-weight: 400;
+$heading-color: inherit;
+$heading-line-height: inherit;
+$heading-gutter-bottom: $spacing-scale-6;

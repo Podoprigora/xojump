@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+	overflow-anchor: none;
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+html {
+	font-size: 62.5%;
+
+	@include media-breakpoint-down("md") {
+		font-size: 50%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	font-family: $font-family-primary;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+	color: $color-primary-darken-1;
+}
