@@ -19,6 +19,24 @@
 		}
 	}
 
+	&--rounded {
+		border-radius: 10rem;
+		border-color: currentColor;
+		border-width: 1px;
+		border-style: solid;
+		padding: $spacing-scale-4 $spacing-scale-8;
+		transition: background-color .2s;
+
+		&::after {
+			content: none;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: rgba(#fff, .08);
+		}
+	}
+
 	&__icon {
 		margin-right: $spacing-scale-6;
 	}

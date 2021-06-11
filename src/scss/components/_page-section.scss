@@ -1,0 +1,47 @@
+.page-section {
+	&__header {
+		padding-bottom: 4rem;
+	}
+
+	&__subtitle {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		font-weight: 400;
+		margin-bottom: $spacing-scale-8;
+
+		&-icon {
+			color: transparent;
+			margin-right: $spacing-scale-6;
+		}
+	}
+
+	&__tbar {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	&__title {
+		flex: 0 1 75%;
+		line-height: 1.1;
+		margin-bottom: 0;
+
+		@include media-breakpoint-down("md") {
+			font-size: 3.6rem;
+		}
+		@include media-breakpoint-down("sm") {
+			font-size: 2.8rem;
+		}
+	}
+
+	&__view-all {
+		flex: none;
+		font-size: 2.4rem;
+		font-weight: 500;
+		color: $color-primary;
+		padding: $spacing-scale-5 $spacing-scale-18;
+		border-width: 2px;
+	}
+}

@@ -10,6 +10,7 @@
 		background-size: cover;
 		background-position: top 50% left 50%;
 		min-height: 80vh;
+		padding-bottom: 6.5rem;
 	}
 
 	&__nav {
@@ -27,6 +28,10 @@
 
 			& > *:not(:last-child) {
 				margin-right: $spacing-scale-12;
+			}
+
+			@include media-breakpoint-down("lg") {
+				display: none;
 			}
 		}
 
@@ -58,6 +63,11 @@
 
 		&-picture {
 			margin-left: 6rem;
+
+			@include media-breakpoint-down("lg") {
+				display: none;
+				margin: 0;
+			}
 		}
 	}
 
@@ -69,6 +79,7 @@
 		font-size: 7.2rem;
 		font-weight: 500;
 		background-color: #000;
+		padding: 0 $spacing-scale-10;
 		border: 1px solid #fff;
 		width: 100%;
 		min-height: 47rem;
@@ -109,20 +120,27 @@
 			right: -4rem;
 			width: 16.6rem;
 			transform: translate3d(0, -50%, 0);
+
+			@include media-breakpoint-down("lg") {
+				right: -2rem;
+			}
 		}
 	}
 
 	&__clocks-list {
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: center;
-		justify-content: flex-start;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 12rem));
+		row-gap: $spacing-scale-12;
 		margin-top: 6rem;
+	}
 
-		& > * {
-			max-width: 12rem;
-			min-width: 10rem;
-			width: 100%;
-		}
+	&__section {
+		padding: 6.5rem 0;
+	}
+
+	&__features-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+		grid-gap: $spacing-scale-12;
 	}
 }

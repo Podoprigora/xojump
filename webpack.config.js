@@ -25,7 +25,7 @@ module.exports = (w, config) => {
                 ? [
                       new CopyWebpackPlugin({
                           patterns: [
-                              //   { from: './public/images', to: 'images' },
+                              { from: './public/images', to: 'images' },
                               { from: './public/favicons', to: 'favicons' },
                               { from: './public/site.webmanifest' }
                           ]
