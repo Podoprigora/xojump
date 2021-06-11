@@ -1,0 +1,22 @@
+.clock {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	&__picture {
+		flex: 1;
+		max-width: 4rem;
+		color: transparent;
+	}
+
+	&__title {
+		flex: none;
+		font-size: 1.6rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-align: center;
+		white-space: nowrap;
+		color: $color-gray-lighten;
+		margin-top: $spacing-scale-7;
+	}
+}

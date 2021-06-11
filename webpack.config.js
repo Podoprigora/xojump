@@ -21,17 +21,17 @@ module.exports = (w, config) => {
                       })
                   ]
                 : []),
-            // ...(!isDev
-            //     ? [
-            //           new CopyWebpackPlugin({
-            //               patterns: [
-            //                   { from: './public/images', to: 'images' },
-            //                   { from: './public/favicons', to: 'favicons' },
-            //                   { from: './public/site.webmanifest' }
-            //               ]
-            //           })
-            //       ]
-            //     : []),
+            ...(!isDev
+                ? [
+                      new CopyWebpackPlugin({
+                          patterns: [
+                              //   { from: './public/images', to: 'images' },
+                              { from: './public/favicons', to: 'favicons' },
+                              { from: './public/site.webmanifest' }
+                          ]
+                      })
+                  ]
+                : []),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
                 chunkFilename: '[name].css'
@@ -75,7 +75,7 @@ module.exports = (w, config) => {
                 open: false,
                 historyApiFallback: true,
                 contentBase: './public',
-                port: 9015
+                port: 9016
             }
         }),
         module: {
@@ -129,6 +129,15 @@ module.exports = (w, config) => {
                 {
                     test: /\.(jpe?g|png)$/i,
                     type: 'asset/resource'
+                },
+                {
+                    test: /.svg$/i,
+                    loader: '@svgr/webpack',
+                    options: {
+                        svgo: true,
+                        dimensions: true,
+                        ref: true
+                    }
                 }
             ]
         }

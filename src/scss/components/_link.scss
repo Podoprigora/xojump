@@ -1,0 +1,43 @@
+.link {
+	$this: &;
+
+	&,
+	&:visited {
+		position: relative;
+		display: inline-flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: flex-start;
+		color: $body-color-light;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:focus {
+		#{$this}__text::after {
+			transform: scale3d(1, 1, 1);
+		}
+	}
+
+	&__icon {
+		margin-right: $spacing-scale-6;
+	}
+
+	&__text {
+		position: relative;
+		display: block;
+
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: .2rem;
+			transform-origin: center;
+			transform: scale3d(0, 1, 1);
+			background-color: currentColor;
+			transition: transform .15s;
+		}
+	}
+}

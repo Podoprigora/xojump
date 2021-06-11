@@ -1,30 +1,20 @@
-@use 'sass:math';
+$color-primary: #d02128;
 
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
-$color-primary-darken-1: #6d5d4b;
-$color-primary-darken-2: #54483a;
+$body-bg-color-dark: #1f1f1f;
+$body-color-light: #fff;
 
-$color-secondary: #000;
-$color-secondary-light-1: lighten($color-secondary, 10%);
+$color-silver: rgba($body-bg-color-dark, .4);
+$color-gray-lighten: #c6c6c6;
 
-$color-gray-lighten: #f9f7f6;
-$color-gray-light-2: darken($color-gray-lighten, 4%);
-$color-gray-light: #aaa;
-
-$color-red: #f44336;
-
-$font-family-primary: "Nutito", Arial, sans-serif;
-$font-family-secondary: 'Josefin Sans', Arial, sans-serif;
+$font-family-primary: "Roboto", Arial, sans-serif;
+$font-family: $font-family-primary;
 $font-size-small: 1.2rem;
 $font-size-medium: 1.4rem;
-$font-size-xmedium: 1.7rem;
+$font-size-xmedium: 1.6rem;
 $font-size-large: 2rem;
 $font-size: $font-size-medium;
-$font-weight: 300;
+$font-weight: 400;
 $line-height: 1.6;
-
-$body-color: $color-secondary;
 
 $border-radius-small: .2rem;
 $border-radius-medium: .5rem;
@@ -74,21 +64,18 @@ $spacing-scale-19: $spacer * 4.75; // 3.8rem
 $spacing-scale-20: $spacer * 5; // 4rem
 $spacing-scale-24: $spacer * 6; // 4.8rem
 
-$grid-columns: 8;
-$grid-column-width: 16rem;
-$container-max-width: $grid-column-width * $grid-columns;
-$container-gap: math.div($grid-column-width, 4);
-$container-gap-small: math.div($grid-column-width, 8);
+$container-max-width: 124.8rem;
+$container-gap: 2.4rem;
 
 // Heading
-$heading-1-font-size: 4.8rem;
-$heading-2-font-size: 3.2rem;
+$heading-1-font-size: 6.4rem;
+$heading-2-font-size: 4.8rem;
 $heading-3-font-size: 2.4rem;
 $heading-4-font-size: 2rem;
 $heading-5-font-size: 1.8rem;
 $heading-6-font-size: $font-size;
-$heading-font-family: $font-family-secondary;
-$heading-font-weight: 400;
+$heading-font-family: $font-family;
+$heading-font-weight: 500;
 $heading-color: inherit;
 $heading-line-height: inherit;
 $heading-gutter-bottom: $spacing-scale-6;

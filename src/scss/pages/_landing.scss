@@ -1,0 +1,128 @@
+.landing {
+	background-color: $body-bg-color-dark;
+	color: $body-color-light;
+
+	&__header {
+		display: block;
+		background-image: linear-gradient(to bottom, rgba(#000, .50), $body-bg-color-dark),
+			url('../../assets/images/bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top 50% left 50%;
+		min-height: 80vh;
+	}
+
+	&__nav {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: $spacing-scale-14 $spacing-scale-2;
+
+		&-links {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			margin-left: auto;
+
+			& > *:not(:last-child) {
+				margin-right: $spacing-scale-12;
+			}
+		}
+
+		&-link {
+			font-size: $font-size-xmedium;
+			font-weight: 400;
+			line-height: 1.6;
+
+			.link__icon {
+				display: block;
+				width: 20px;
+			}
+
+			.coming-soon {
+				width: auto;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__header-content {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+
+		&-body {
+			flex: 1;
+		}
+
+		&-picture {
+			margin-left: 6rem;
+		}
+	}
+
+	&__header-ad {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		font-size: 7.2rem;
+		font-weight: 500;
+		background-color: #000;
+		border: 1px solid #fff;
+		width: 100%;
+		min-height: 47rem;
+		margin-top: 6rem;
+		opacity: .3;
+	}
+
+	&__title {
+		line-height: 1.2;
+		margin-bottom: $spacing-scale-8;
+	}
+
+	&__desc {
+		font-size: 2.4rem;
+		line-height: 1.2;
+		max-width: 50rem;
+	}
+
+	&__search {
+		position: relative;
+		font-size: 1.8rem;
+		font-weight: 500;
+		margin-top: 4rem;
+
+		.search-input {
+			&__icon {
+				margin-left: $spacing-scale-15;
+			}
+			&__el {
+				padding: $spacing-scale-10;
+				padding-left: $spacing-scale-6;
+			}
+		}
+
+		.coming-soon {
+			position: absolute;
+			top: 50%;
+			right: -4rem;
+			width: 16.6rem;
+			transform: translate3d(0, -50%, 0);
+		}
+	}
+
+	&__clocks-list {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: flex-start;
+		margin-top: 6rem;
+
+		& > * {
+			max-width: 12rem;
+			min-width: 10rem;
+			width: 100%;
+		}
+	}
+}

@@ -27,5 +27,14 @@ body {
 	font-size: $font-size;
 	font-weight: $font-weight;
 	line-height: $line-height;
-	color: $color-primary-darken-1;
+}
+
+.app-root {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100%;
+
+	& > * {
+		flex: 1;
+	}
 }

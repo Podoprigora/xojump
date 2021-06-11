@@ -1,0 +1,39 @@
+.search-input {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 0 0 0 1px $color-silver;
+	border-radius: 10rem;
+	width: 100%;
+	overflow: hidden;
+
+	&__icon {
+		display: block;
+		width: 16px;
+		color: $color-silver;
+		margin-left: $spacing-scale-6;
+	}
+
+	&__el {
+		display: block;
+		background-color: inherit;
+		font-size: inherit;
+		padding: $spacing-scale-6;
+		border: 0;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			font-weight: inherit;
+			color: $color-silver;
+			opacity: 1;
+		}
+
+		&:-webkit-autofill {
+			box-shadow: none;
+		}
+	}
+}

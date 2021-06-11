@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { SiteMainPage } from '../site/SiteMainPage';
+
 const App = () => {
-    return <div>Init Landing Page</div>;
+    return <SiteMainPage />;
 };
 
 export { App };
