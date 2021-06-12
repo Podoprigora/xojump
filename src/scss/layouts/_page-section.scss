@@ -37,11 +37,15 @@
 	}
 
 	&__view-all {
-		flex: none;
-		font-size: 2.4rem;
-		font-weight: 500;
-		color: $color-primary;
-		padding: $spacing-scale-5 $spacing-scale-18;
-		border-width: 2px;
+		&,
+		&:visited {
+			flex: none;
+			font-size: 2.4rem;
+			font-weight: 500;
+			color: $color-primary;
+			padding: $spacing-scale-5 $spacing-scale-18;
+			border-width: 2px;
+			margin-left: $spacing-scale-10;
+		}
 	}
 }

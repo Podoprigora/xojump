@@ -177,6 +177,10 @@
 
 			.page-section__header {
 				padding-bottom: $spacing-scale-2;
+
+				@include media-breakpoint-down("sm2") {
+					margin-bottom: 5.2rem;
+				}
 			}
 
 			.page-section__body {
