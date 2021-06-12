@@ -143,5 +143,9 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 		grid-gap: $spacing-scale-12;
+
+		@include media-breakpoint-down("lg") {
+			grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+		}
 	}
 }
