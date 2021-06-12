@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from '../../ui';
 import { News, NewsTile } from '../../News';
 import { Feature } from '../../Feature';
+import { Footer } from '../../Footer';
 import { MainPageSearch } from './MainPageSearch';
 import { MainPageClocks } from './MainPageClocks';
 
@@ -11,11 +12,14 @@ import {
     BrandMarkSvg,
     ContactUs19Svg,
     ComingSoon56Svg,
-    SectionIcon40Svg,
+    BrandSectionIcon40Svg,
+    BrandSectionIconWhite40Svg,
     BrandSearchEngine73Svg,
     BrandAccount64Svg,
     BrandDebitCard48Svg,
-    BrandBlockchain66Svg
+    BrandBlockchain66Svg,
+    BrandRabbitSvg,
+    QuoteSvg
 } from '../../../assets/svg';
 import { FoxHead20Img } from '../../../assets/images';
 
@@ -27,7 +31,7 @@ export const SiteMainPage = () => {
             <header className="landing__header">
                 <div className="container">
                     <nav className="landing__nav">
-                        <BrandLogoSvg className="logo landing__logo" />
+                        <BrandLogoSvg className="logo landing__header-logo" />
 
                         <ul className="landing__nav-links">
                             <li className="landing__nav-item">
@@ -88,7 +92,7 @@ export const SiteMainPage = () => {
                 <div className="landing__section page-section">
                     <header className="page-section__header">
                         <h6 className="page-section__subtitle">
-                            <SectionIcon40Svg className="page-section__subtitle-icon" />
+                            <BrandSectionIcon40Svg className="page-section__subtitle-icon" />
                             News
                         </h6>
                         <div className="page-section__tbar">
@@ -126,57 +130,85 @@ export const SiteMainPage = () => {
                         </News>
                     </div>
                 </div>
+            </div>
 
-                {/* Features */}
-
-                <div className="landing__section page-section">
-                    <header className="page-section__header">
-                        <h6 className="page-section__subtitle">
-                            <SectionIcon40Svg className="page-section__subtitle-icon" />
-                            Features
-                        </h6>
-                        <div className="page-section__tbar">
-                            <h2 className="page-section__title">
-                                We Deliver The Best Experience <br /> For Our Loved Users
-                            </h2>
+            <div className="landing__bottom-bg">
+                <div className="container">
+                    {/* Features */}
+                    <div className="landing__section page-section">
+                        <header className="page-section__header">
+                            <h6 className="page-section__subtitle">
+                                <BrandSectionIcon40Svg className="page-section__subtitle-icon" />
+                                Features
+                            </h6>
+                            <div className="page-section__tbar">
+                                <h2 className="page-section__title">
+                                    We Deliver The Best Experience <br /> For Our Loved Users
+                                </h2>
+                            </div>
+                        </header>
+                        <div className="page__section-body landing__features-list">
+                            <Feature
+                                href="#"
+                                icon={<BrandSearchEngine73Svg />}
+                                title="Search Engine"
+                                comingSoon
+                            >
+                                Enjoy XOjump search Engine! With cool updated hyper portal features.
+                                Also, check out our Pioneer Business Ads
+                            </Feature>
+                            <Feature
+                                href="#"
+                                icon={<BrandAccount64Svg />}
+                                title="Personal Account"
+                                comingSoon
+                            >
+                                Enjoy logging in with your meta mask/email. List yourself as an XO
+                                JUMP business merchant, which will be available for all XO Jump
+                                users to view your business your products/services!
+                            </Feature>
+                            <Feature
+                                icon={<BrandDebitCard48Svg />}
+                                title="Pre Paid Debit Card"
+                                comingSoon
+                            >
+                                Utilize XOjump and XODS token to purchase Virtual Data Resistant
+                                Prepaid debit cards at your disposal!
+                            </Feature>
+                            <Feature icon={<BrandBlockchain66Svg />} title="Blockchain" comingSoon>
+                                Binance Smart Chain interoperability enables consumers and
+                                businesses to access exposure to new emerging economic factions
+                                within the realm of blockchain and it&apos;s plethora of users
+                                accustomed to decentralized finances
+                            </Feature>
                         </div>
-                    </header>
-                    <div className="page__section-body landing__features-list">
-                        <Feature
-                            href="#"
-                            icon={<BrandSearchEngine73Svg />}
-                            title="Search Engine"
-                            comingSoon
-                        >
-                            Enjoy XOjump search Engine! With cool updated hyper portal features.
-                            Also, check out our Pioneer Business Ads
-                        </Feature>
-                        <Feature
-                            href="#"
-                            icon={<BrandAccount64Svg />}
-                            title="Personal Account"
-                            comingSoon
-                        >
-                            Enjoy logging in with your meta mask/email. List yourself as an XO JUMP
-                            business merchant, which will be available for all XO Jump users to view
-                            your business your products/services!
-                        </Feature>
-                        <Feature
-                            icon={<BrandDebitCard48Svg />}
-                            title="Pre Paid Debit Card"
-                            comingSoon
-                        >
-                            Utilize XOjump and XODS token to purchase Virtual Data Resistant Prepaid
-                            debit cards at your disposal!
-                        </Feature>
-                        <Feature icon={<BrandBlockchain66Svg />} title="Blockchain" comingSoon>
-                            Binance Smart Chain interoperability enables consumers and businesses to
-                            access exposure to new emerging economic factions within the realm of
-                            blockchain and it&apos;s plethora of users accustomed to decentralized
-                            finances
-                        </Feature>
+                    </div>
+
+                    {/* Contact us */}
+
+                    <div className="landing__section landing__section--contact-us page__section">
+                        <header className="page-section__header">
+                            <h6 className="page-section__subtitle">
+                                <BrandSectionIconWhite40Svg className="page-section__subtitle-icon" />
+                                Contact us
+                            </h6>
+                            <h2 className="page-section__title">
+                                Want to learn more about programs for our potential clients or place
+                                your ads? Contact us directly!
+                            </h2>
+                        </header>
+                        <div className="page-section__body">
+                            <a href="#" className="link link--rounded">
+                                Contact us
+                            </a>
+                            <BrandRabbitSvg />
+                        </div>
                     </div>
                 </div>
+
+                {/* Footer */}
+
+                <Footer className="landing__footer" />
             </div>
         </div>
     );

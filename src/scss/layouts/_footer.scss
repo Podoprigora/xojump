@@ -1,0 +1,141 @@
+// Mixins
+
+@mixin footer-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(min-content, 1fr));
+	grid-gap: $spacing-scale-12;
+	align-items: start;
+}
+
+// Selectors
+
+.footer {
+	&__body {
+		@include footer-grid;
+		margin-bottom: 6.5rem;
+
+		@include media-breakpoint-down("sm") {
+			grid-template-columns: repeat(2, minmax(min-content, 1fr));
+			grid-gap: $spacing-scale-14;
+		}
+	}
+
+	&__text {
+		font-size: $font-size-xmedium;
+		line-height: 1.3;
+		opacity: .7;
+		margin-bottom: 0;
+	}
+
+	&__logo {
+		width: 90px;
+	}
+
+	&__social-links {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 3.2rem);
+		grid-gap: $spacing-scale-6;
+		align-items: center;
+		margin-top: $spacing-scale-12;
+	}
+
+	&__social-link {
+		color: #fff;
+		box-shadow: 0 0 0 1px rgba(#fff, .2);
+	}
+
+	&__quote {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+
+		@include media-breakpoint-down("sm") {
+			grid-row: 2 / 3;
+		}
+
+		&-icon {
+			flex: none;
+			color: $color-primary-dark;
+			margin-right: $spacing-scale-6;
+			width: 1.8rem;
+		}
+
+		.footer__text {
+			max-width: 18rem;
+			width: 100%;
+			transform: translateY(-.3rem);
+		}
+	}
+
+	&__address {
+		max-width: 16rem;
+		width: 100%;
+	}
+
+	&__nav {
+		display: block;
+		column-count: 2;
+
+		@include media-breakpoint-down("md") {
+			column-count: 1;
+		}
+
+		@include media-breakpoint-down("sm") {
+			column-count: 2;
+		}
+
+		&-item {
+			display: block;
+		}
+
+		&-link {
+			padding: $spacing-scale-2 0;
+			line-height: 1.2;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__divider {
+		margin: $spacing-scale-8 0;
+		border-color: $color-gray-lighten;
+		opacity: .2;
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: $spacing-scale-6;
+	}
+
+	&__copyright {
+		@include footer-grid;
+		font-size: $font-size-small;
+		color: #fff;
+		margin-bottom: $spacing-scale-16;
+
+		& > :first-child {
+			grid-column: 1 / 3;
+		}
+
+		&-link {
+			&,
+			&:visited {
+				color: inherit;
+				text-decoration: none;
+				opacity: .4;
+				transition: opacity .2s;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.footer__text {
+			font-size: inherit;
+			opacity: .4;
+		}
+	}
+}
