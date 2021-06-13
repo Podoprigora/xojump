@@ -5,25 +5,25 @@ import { ClockSvg } from '../../../assets/svg';
 const MainPageClocks = () => {
     return (
         <ul className="landing__clocks-list">
-            <li className="landing__clocks-list-item clock">
-                <ClockSvg className="clock__picture" />
-                <span className="clock__title">NEW YORK</span>
+            <li className="landing__clocks-list-item area-clock">
+                <ClockSvg className="area-clock__picture" />
+                <span className="area-clock__title">NEW YORK</span>
             </li>
-            <li className="landing__clocks-list-item clock">
-                <ClockSvg className="clock__picture" />
-                <span className="clock__title">LOS ANGELES</span>
+            <li className="landing__clocks-list-item area-clock">
+                <ClockSvg className="area-clock__picture" />
+                <span className="area-clock__title">LOS ANGELES</span>
             </li>
-            <li className="landing__clocks-list-item clock">
-                <ClockSvg className="clock__picture" />
-                <span className="clock__title">Jamaica</span>
+            <li className="landing__clocks-list-item area-clock">
+                <ClockSvg className="area-clock__picture" />
+                <span className="area-clock__title">Jamaica</span>
             </li>
-            <li className="landing__clocks-list-item clock">
-                <ClockSvg className="clock__picture" />
-                <span className="clock__title">DUBAI</span>
+            <li className="landing__clocks-list-item area-clock">
+                <ClockSvg className="area-clock__picture" />
+                <span className="area-clock__title">DUBAI</span>
             </li>
-            <li className="landing__clocks-list-item clock">
-                <ClockSvg className="clock__picture" />
-                <span className="clock__title">NIGERIA</span>
+            <li className="landing__clocks-list-item area-clock">
+                <ClockSvg className="area-clock__picture" />
+                <span className="area-clock__title">NIGERIA</span>
             </li>
         </ul>
     );

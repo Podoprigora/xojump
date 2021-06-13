@@ -1,7 +1,13 @@
-.clock {
+.area-clock {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+
+	&__clock {
+		flex: 1;
+		max-width: 4rem;
+		color: transparent;
+	}
 
 	&__picture {
 		flex: 1;
