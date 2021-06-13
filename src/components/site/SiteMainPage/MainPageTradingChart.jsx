@@ -7,7 +7,7 @@ const MainPageTradingChart = () => {
                 <div className="landing__trading-chart">
                     <div className="landing__trading-chart-widget">
                         <img
-                            src="images/trading-chart-placeholder.png"
+                            src="images/xodschart.jpg"
                             alt="Trading Chart Placeholder"
                             className="landing__trading-chart-widget-placeholder"
                         />
