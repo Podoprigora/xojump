@@ -17,7 +17,7 @@ const Clock = React.forwardRef(function Clock(props, forwardedRef) {
     const hours = date.getHours();
     const minutes = date.getMinutes();
 
-    const hourAngle = hours * 15 + (15 / 60) * minutes;
+    const hourAngle = hours * 30 + minutes / 2;
     const minuteAngle = minutes * 6;
 
     return (
