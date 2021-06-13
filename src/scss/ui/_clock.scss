@@ -1,0 +1,35 @@
+.clock {
+	position: relative;
+	display: block;
+	color: inherit;
+	width: 10rem;
+	height: 10rem;
+
+	&__face {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		border: 1px solid currentColor;
+		border-radius: 50%;
+	}
+
+	&__hand {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		right: 50%;
+		color: inherit;
+
+		&-body {
+			position: absolute;
+			width: 1px;
+			top: 0;
+			bottom: 49%;
+			background-color: #fff;
+			transform: translateX(-50%);
+		}
+	}
+}
