@@ -24,7 +24,7 @@ const MainPageNews = () => {
                 <News>
                     <NewsTile
                         id={1}
-                        date="2012-06-21"
+                        date="2021-06-21"
                         title="Bitcoin passes one trillion dollar market cap"
                         image="images/news-img-1.png"
                     >
@@ -34,7 +34,7 @@ const MainPageNews = () => {
                     </NewsTile>
                     <NewsTile
                         id={2}
-                        date="2012-06-23"
+                        date="2021-06-23"
                         title="XODS featured in source magazine!"
                         image="images/news-img-2.png"
                     >

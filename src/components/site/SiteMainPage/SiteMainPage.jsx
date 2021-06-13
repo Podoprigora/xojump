@@ -80,7 +80,32 @@ export const SiteMainPage = () => {
                         </div>
                     </div>
 
-                    <div className="landing__header-ad">Your ad here</div>
+                    <div className="landing__header-ad">
+                        <div className="page__section landing__section-special">
+                            <div className="landing__header-ad-container">
+                                <div className="landing__header-ad-logo-container">
+                                    <BrandLogoSvg className="landing__header-ad-logo" />
+                                </div>
+                                <div className="landing__header-ad-content">
+                                    <header className="page-section__header">
+                                        <h2 className="page-section__title">Get your ad here</h2>
+                                    </header>
+                                    <div className="page-section__body">
+                                        <p className="page-section__text">
+                                            XOJump suggests the best conditions for your ad — make
+                                            the advertisement work efficiently with XOJump!
+                                        </p>
+                                        <a href="#" className="link link--rounded">
+                                            Contact us
+                                        </a>
+                                        <div className="landing__header-ad-rabit">
+                                            <BrandRabbitSvg />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </header>
 
@@ -151,21 +176,22 @@ export const SiteMainPage = () => {
                     {/* Contact us */}
 
                     <div className="landing__section landing__section--contact-us page__section">
-                        <header className="page-section__header">
-                            <h6 className="page-section__subtitle">
-                                <BrandSectionIconWhite40Svg className="page-section__subtitle-icon" />
-                                Contact us
-                            </h6>
-                            <h2 className="page-section__title">
-                                Want to learn more about programs for our potential clients or place
-                                your ads? Contact us directly!
-                            </h2>
-                        </header>
-                        <div className="page-section__body">
-                            <a href="#" className="link link--rounded">
-                                Contact us
-                            </a>
-                            <BrandRabbitSvg />
+                        <div className="landing__section-special">
+                            <header className="page-section__header">
+                                <h6 className="page-section__subtitle">
+                                    <BrandSectionIconWhite40Svg className="page-section__subtitle-icon" />
+                                    Contact us
+                                </h6>
+                                <h2 className="page-section__title">
+                                    Want to learn more about programs for our potential clients or
+                                    place your ads? Contact us directly!
+                                </h2>
+                            </header>
+                            <div className="page-section__body">
+                                <a href="#" className="link link--rounded">
+                                    Contact us
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

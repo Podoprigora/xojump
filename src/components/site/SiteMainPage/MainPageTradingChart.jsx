@@ -12,9 +12,6 @@ const MainPageTradingChart = () => {
                             className="landing__trading-chart-widget-placeholder"
                         />
                     </div>
-                    <div className="landing__trading-chart-shared">
-                        <div className="landing__shared">Share your emotions on</div>
-                    </div>
                 </div>
             </div>
         </div>
