@@ -15,7 +15,7 @@ import Clock from './clock.svg';
 import Quote from './quote.svg';
 import Telegram from './social/telegram.svg';
 import Twitter from './social/twitter.svg';
-import Radio from './social/radio.svg';
+import TikTok from './social/tik-tok.svg';
 
 export const ComingSoon56Svg = ComingSoon56;
 export const ContactUs19Svg = ContactUs19;
@@ -36,4 +36,4 @@ export const QuoteSvg = Quote;
 
 export const TelegramSvg = Telegram;
 export const TwitterSvg = Twitter;
-export const RadioSvg = Radio;
+export const TikTokSvg = TikTok;

@@ -18,7 +18,7 @@ const Footer = (props) => {
                         <div className="footer__social-links">
                             <SocialLink type="telegram" className="footer__social-link" />
                             <SocialLink type="twitter" className="footer__social-link" />
-                            <SocialLink type="radio" className="footer__social-link" />
+                            <SocialLink type="tiktok" className="footer__social-link" />
                         </div>
                     </div>
                     <div className="footer__item footer__quote">

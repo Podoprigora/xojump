@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { TwitterSvg, TelegramSvg, RadioSvg } from '../../assets/svg';
+import { TwitterSvg, TelegramSvg, TikTokSvg } from '../../assets/svg';
 
 const socialIcons = {
     twitter: <TwitterSvg />,
     telegram: <TelegramSvg />,
-    radio: <RadioSvg />,
+    tiktok: <TikTokSvg />,
     _default: null
 };
 
@@ -36,7 +36,7 @@ const SocialLink = React.forwardRef(function SocialLink(props, forwardedRef) {
 });
 
 SocialLink.propTypes = {
-    type: PropTypes.oneOf(['twitter', 'telegram', 'radio']).isRequired
+    type: PropTypes.oneOf(['twitter', 'telegram', 'tiktok']).isRequired
 };
 
 export { SocialLink };
