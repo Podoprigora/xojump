@@ -21,6 +21,7 @@ import {
     BrandRabbitSvg
 } from '../../../assets/svg';
 import { FoxHead20Img } from '../../../assets/images';
+import { MainPageTradingChart } from './MainPageTradingChart';
 
 export const SiteMainPage = () => {
     return (
@@ -89,6 +90,9 @@ export const SiteMainPage = () => {
                 {/* News section */}
 
                 <MainPageNews />
+
+                {/* Trading Chart */}
+                <MainPageTradingChart />
             </div>
 
             <div className="landing__bottom-bg">
