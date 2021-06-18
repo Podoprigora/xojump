@@ -111,7 +111,7 @@ export const SiteMainPage = () => {
 
             {/* Main content */}
 
-            <div className="container">
+            <div className="container u-flex-column">
                 {/* News section */}
 
                 <MainPageNews />
@@ -121,7 +121,7 @@ export const SiteMainPage = () => {
             </div>
 
             <div className="landing__bottom-bg">
-                <div className="container">
+                <div className="container u-flex-column">
                     {/* Features */}
 
                     <div className="landing__section page-section">
