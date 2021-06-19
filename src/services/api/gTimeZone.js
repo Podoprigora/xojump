@@ -4,6 +4,7 @@ import axios from 'axios';
 const gTimeZoneApi = 'AIzaSyCFi2Xs6dxq2djGI3fDRpVRXMjiMMFNWEg';
 
 // TimeZone docs: https://developers.google.com/maps/documentation/timezone/overview
+
 export const getTimestampByPosition = async (coordinates = []) => {
     const coordinatesString = coordinates.join(',');
     const unixTimestamp = Math.floor(new Date().getTime() / 1000);

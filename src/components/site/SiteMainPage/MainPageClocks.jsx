@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { getTimestampByPosition } from '../../../services/api/gTimeZone';
+import React, { useState, useEffect, useCallback } from 'react';
 
+import { getTimestampByPosition } from '../../../services/api';
 import { MainPageAreaClock } from './MainPageAreaClock';
 
 const defaultAreas = [
@@ -14,7 +14,7 @@ const defaultAreas = [
 const MainPageClocks = () => {
     const [areas, setAreas] = useState([]);
 
-    const fetchCitiesTimeOffset = async () => {
+    const fetchAreasTimestamp = useCallback(async () => {
         const result = [];
 
         for (const area of defaultAreas) {
@@ -29,11 +29,13 @@ const MainPageClocks = () => {
         }
 
         setAreas(result);
-    };
-
-    useState(() => {
-        fetchCitiesTimeOffset();
     }, []);
+
+    useEffect(() => {
+        fetchAreasTimestamp();
+    }, [fetchAreasTimestamp]);
+
+    // Render
 
     if (areas.length === 0) {
         return null;

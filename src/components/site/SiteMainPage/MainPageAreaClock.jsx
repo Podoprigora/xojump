@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Clock } from '../../ui/Clock';
 
 const MainPageAreaClock = (props) => {
-    const { timestamp, interval: intervalProp = 1000 * 60 } = props;
+    const { timestamp, interval: intervalProp = 60000 } = props;
     const [date, setDate] = useState(new Date(timestamp));
 
     useState(() => {

@@ -31,7 +31,7 @@ const Clock = React.forwardRef(function Clock(props, forwardedRef) {
 });
 
 Clock.propTypes = {
-    value: PropTypes.object,
+    value: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
     utc: PropTypes.bool,
     hourHandLength: PropTypes.number,
     minuteHandLength: PropTypes.number,
