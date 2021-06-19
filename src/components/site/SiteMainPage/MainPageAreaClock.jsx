@@ -24,6 +24,7 @@ const MainPageAreaClock = (props) => {
     return (
         <Clock
             value={date}
+            utc
             className="area-clock__clock"
             hourHandLength={55}
             minuteHandLength={70}
