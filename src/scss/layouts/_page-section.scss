@@ -46,6 +46,10 @@
 			padding: $spacing-scale-5 $spacing-scale-18;
 			border-width: 2px;
 			margin-left: $spacing-scale-10;
+
+			@include media-breakpoint-down("sm") {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }

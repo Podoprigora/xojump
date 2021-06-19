@@ -1,3 +1,10 @@
+// Variables
+
+$landing-large-gap: 6.5rem;
+$landing-small-gap: 3.8rem;
+
+// Selectors
+
 .landing {
 	display: flex;
 	flex-flow: column nowrap;
@@ -12,7 +19,11 @@
 		background-size: cover;
 		background-position: top 50% left 50%;
 		min-height: 80vh;
-		margin-bottom: 6.5rem;
+		margin-bottom: $landing-large-gap;
+
+		@include media-breakpoint-down("md") {
+			margin-bottom: $landing-small-gap;
+		}
 	}
 
 	&__bottom-bg {
@@ -127,10 +138,19 @@
 		&-rabit {
 			display: flex;
 			justify-content: flex-end;
+
+			@include media-breakpoint-down("sm") {
+				justify-content: flex-start;
+				margin-top: 5.2rem;
+			}
 		}
 
 		.landing__section-special {
 			padding: 5.2rem 6.6rem;
+
+			@include media-breakpoint-down("sm") {
+				padding: $landing-small-gap;
+			}
 		}
 
 		.page-section__header {
@@ -203,12 +223,19 @@
 	}
 
 	&__section {
-		// padding: 6.5rem 0;
-		margin: 6.5rem 0;
+		margin: $landing-large-gap 0;
+
+		@include media-breakpoint-down("md") {
+			margin: $landing-small-gap 0;
+		}
 
 		&--contact-us {
 			.landing__section-special {
 				padding: 5.2rem 7.2rem;
+
+				@include media-breakpoint-down("sm") {
+					padding: $landing-small-gap;
+				}
 			}
 
 			.page-section__subtitle {
@@ -240,6 +267,10 @@
 	&__section-special {
 		background-color: $color-primary-dark;
 		padding: 6.6rem;
+
+		@include media-breakpoint-down("sm") {
+			padding: $landing-small-gap;
+		}
 
 		.link {
 			font-size: $font-size-xlarge;
