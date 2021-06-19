@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { getTimestampByPosition } from '../../../services/api/gTimeZone';
 
 import { MainPageAreaClock } from './MainPageAreaClock';
-
-// TimeZone docs: https://developers.google.com/maps/documentation/timezone/overview
 
 const defaultAreas = [
     { name: 'New York', coordinates: [40.6976637, -74.1197618], timestamp: null },
@@ -13,31 +11,8 @@ const defaultAreas = [
     { name: 'NIGERIA', coordinates: [9.032492, 6.4341506], timestamp: null }
 ];
 
-// Google API Key
-const gTimeZoneApi = '';
-
-const fetchTimeZoneOffset = async (coordinates = []) => {
-    try {
-        const coordinatesStr = coordinates.join(',');
-        const unixTimestamp = Math.floor(new Date().getTime() / 1000);
-
-        const url = `https://maps.googleapis.com/maps/api/timezone/json?location=${coordinatesStr}&timestamp=${unixTimestamp}&key=${gTimeZoneApi}`;
-
-        const { data } = await axios.get(url);
-
-        if (data?.rawOffset) {
-            return (unixTimestamp + data.rawOffset + data.dstOffset) * 1000;
-        }
-
-        return null;
-    } catch {
-        return null;
-    }
-};
-
 const MainPageClocks = () => {
-    const [areas, setAreas] = useState(defaultAreas);
-    const [loading, setLoading] = useState(true);
+    const [areas, setAreas] = useState([]);
 
     const fetchCitiesTimeOffset = async () => {
         const result = [];
@@ -46,7 +21,7 @@ const MainPageClocks = () => {
             const { coordinates } = area;
 
             // eslint-disable-next-line no-await-in-loop
-            const timestamp = await fetchTimeZoneOffset(coordinates);
+            const timestamp = await getTimestampByPosition(coordinates);
 
             if (timestamp) {
                 result.push({ ...area, timestamp });
@@ -54,14 +29,13 @@ const MainPageClocks = () => {
         }
 
         setAreas(result);
-        setLoading(false);
     };
 
     useState(() => {
         fetchCitiesTimeOffset();
     }, []);
 
-    if (loading) {
+    if (areas.length === 0) {
         return null;
     }
 
