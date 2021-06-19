@@ -14,7 +14,7 @@ const defaultAreas = [
 ];
 
 // Google API Key
-const gTimeZoneApi = 'AIzaSyCFi2Xs6dxq2djGI3fDRpVRXMjiMMFNWEg';
+const gTimeZoneApi = '';
 
 const fetchTimeZoneOffset = async (coordinates = []) => {
     try {
@@ -49,7 +49,7 @@ const MainPageClocks = () => {
             const timestamp = await fetchTimeZoneOffset(coordinates);
 
             if (timestamp) {
-                result.push({ ...area, timestamp, date: new Date(timestamp) });
+                result.push({ ...area, timestamp });
             }
         }
 
