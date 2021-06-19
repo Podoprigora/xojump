@@ -14,7 +14,7 @@ const defaultAreas = [
 ];
 
 // Google API Key
-const gTimeZoneApi = '';
+const gTimeZoneApi = 'AIzaSyCFi2Xs6dxq2djGI3fDRpVRXMjiMMFNWEg';
 
 const fetchTimeZoneOffset = async (coordinates = []) => {
     try {
